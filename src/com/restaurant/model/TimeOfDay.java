@@ -1,5 +1,5 @@
 package com.restaurant.model;
 
-public class TimeOfDay {
-
+public enum TimeOfDay {
+	MORNING, NIGHT
 }
