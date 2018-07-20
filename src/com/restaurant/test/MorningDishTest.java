@@ -9,27 +9,27 @@ import com.restaurant.model.MorningDish;
 class MorningDishTest {
 	
 	@Test
-	void testValueOf2IsToast() {
-
+	void testValueOf() {
+		assertEquals(MorningDish.valueOf(1), MorningDish.ENTREE);
 		assertEquals(MorningDish.valueOf(2), MorningDish.SIDE);
-	}
-	
-	@Test
-	void testValueOf4IsNull() {
-
+		assertEquals(MorningDish.valueOf(3), MorningDish.DRINK);
 		assertEquals(MorningDish.valueOf(4), null);
 	}
 	
 	@Test
-	void testMorningDrinkCanRepeat() {
+	void testDrinkCanRepeat() {
 		MorningDish dish = MorningDish.DRINK;
 		assertTrue(dish.CanBeRepeated());
 	}
 	
 	@Test
-	void testMorningEntreeCantRepeat() {
+	void testNonDrinkDishesCantRepeat() {
 		MorningDish dish = MorningDish.ENTREE;
 		assertFalse(dish.CanBeRepeated());
+		
+		dish = MorningDish.SIDE;
+		assertFalse(dish.CanBeRepeated());
+
 	}
 	
 	
