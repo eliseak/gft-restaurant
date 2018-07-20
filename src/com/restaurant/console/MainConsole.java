@@ -11,11 +11,11 @@ public class MainConsole {
 		System.out.println("Input: ");
 		
 		Scanner scanner = new Scanner(System.in); 
-		String input[] = scanner.nextLine().split(",");
+		String input[] = scanner.nextLine().replaceAll("\\s+","").split(",");
 		scanner.close();
 
 		TimeOfDay time;
-		if (input[0].toLowerCase() == "morning") time = TimeOfDay.MORNING;
+		if (input[0].toLowerCase().equals("morning")) time = TimeOfDay.MORNING;
 		else time = TimeOfDay.NIGHT;
 		
 		int[] dishes = new int[input.length-1];
