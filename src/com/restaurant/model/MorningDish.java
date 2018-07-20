@@ -4,7 +4,8 @@ public enum MorningDish implements Dish{
 	
 	ENTREE("eggs", 1),
 	SIDE("toast", 2),
-	DRINK("coffee", 3);
+	DRINK("coffee", 3),
+	DESSERT("none", 4);
 	
 	private int id;
 	private String name;
