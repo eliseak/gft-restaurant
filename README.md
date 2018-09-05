@@ -1,5 +1,5 @@
-# gft-console-restaurant  
-Developer Practicum from GFT  
+# gft-restaurant  
+GFT's technical test answer 
 
 Made with:  
 * IDE: Eclipse
